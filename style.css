@@ -1,0 +1,164 @@
+/*mobilra vonatkozó beállítások*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: white
+}
+html{
+    scrollbar-width: 1px;
+    scroll-behavior: smooth;
+}
+body
+{
+    background-color: #621708;
+}
+.container>* {margin: 1%;
+    height: fit-content;
+}
+header{
+    display: flex;
+    justify-content: center;
+    
+    
+}
+header#focim{
+    background-image: url(..//képek/joanna-kosinska-4dnG4q3kxdg-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    height: 300px;
+    margin: 0;
+}
+
+header#focim h1{
+    font-weight: bold;
+    font-variant: small-caps;
+    text-align: center;
+    align-self: center;
+    text-shadow: 3px 1px 3px grey;
+    font-size: 3em;
+}
+
+.alcimek{
+    font-style: italic;
+    text-align: center;
+    color: #220901;
+    font-size: 1.5em;
+}
+nav {
+    padding: 6px;
+    flex: 1 1 100%;
+    
+}
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+nav ul li a{
+    display: block;
+    margin: 5px;
+    border: solid #220901 1px;
+    border-radius: 10px;
+    background-color: #F6AA1C;
+    padding: 10px;
+    color: #220901;
+    font-style: none;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.7em;
+    
+    
+}
+
+.tortenelem
+{
+    background-color: #C52233;
+    flex: 1 1 100%;
+    margin: 10px;
+    padding: 3px;
+    justify-content: center;
+    border-radius: 10px 2px;
+}
+
+section{
+    flex: 1 1 100%;
+    margin: 5px 8px;
+    padding: 3px;
+}
+aside.svajc{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+.svajc section
+{
+    
+    justify-content: space-around;
+}
+.svajc{
+    height: 300px;
+    background-image: url(..//képek/aside_hatter.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    border: #FFE6A7 1px solid;
+    
+}
+.svajc section{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+}
+
+aside.svajc header, .svajc li {
+    color: #FFE6A7;
+    font-size: 1.5em;
+}
+
+p{
+    text-align: justify;
+}
+
+aside{
+    display: flex;
+    margin: 10px;
+}
+.erdekes
+{
+    display: block;
+    background-color: #FFE6A7;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.erdekes p{
+    color: #220901;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    background-color:  #432818;
+    align-items: center;
+    padding: 30px 10px;
+    margin: 0;
+}
+
+
+@media all and (min-width: 600px) 
+{
+    /* tabletre vonatkozó beállítások */
+}
+
+
+@media all and (min-width: 768px) 
+{
+    /* számítógépre vonatkozó beállítások */
+
+}
