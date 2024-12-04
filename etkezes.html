@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dobó Heléna Lilla">
+    <meta name="copyright" content="csak oktatási célokra">
+    <meta name="description" content="A csokoládé árusítása népszerűsítése">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon/discussion.png">
+    <script src="jquery-3.7.1.js"></script>
+    <script src="jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
+    <script>
+        console.log("jQuery version:", $.fn.jquery);
+
+        $(document).ready(function () {
+
+            $("#kerdoiv").validate({
+                rules: {
+                    nev: {
+                        required: true,
+                        minlength: 3,
+                    },
+                    gmail: {
+                        required: true,
+                        email: true,
+                    },
+                    telszam: {
+                        required: true,
+                    },
+                    neme: {
+                        required: true,
+                    },
+                    tipus: {
+                        required: true,
+                    },
+                    interval: {
+                        required: true,
+                        range: [1, 10]
+                    },
+                    utoljara: {
+                        required: true,
+                        date: true,
+                    },
+                    megfigyeles: {
+                        minlength: 10,
+                    }
+                },
+                messages: {
+                    nev: {
+                        required: "Kérlek, add meg a neved!",
+                        minlength: "A név legalább 3 karakter hosszú legyen!",
+                    },
+                    gmail: {
+                        required: "Kérlek, add meg az email címed!",
+                        email: "Kérlek, érvényes email címet adj meg!",
+                    },
+                    telszam: {
+                        required: "Kérlek, add meg a telefonszámod!",
+
+                    },
+                    neme: {
+                        required: "Kérlek, válaszd ki a nemed!",
+                    },
+                    tipus: {
+                        required: "Kérlek, válaszd ki a kedvenc csoki típusodat!",
+                    },
+                    interval: {
+                        required: "Kérlek, válassz egy értéket a csokoládé iránti szeretetedre!",
+                        range: "Az értéknek 1 és 10 között kell lennie!",
+                    },
+                    utoljara: {
+                        required: "Kérlek, add meg a kívánt szállítási dátumot!",
+                        date: "Kérlek, érvényes dátumot adj meg!",
+                    },
+                    megfigyeles: {
+                        minlength: "Ha megjegyzést adsz meg, legalább 10 karakter hosszúnak kell lennie!",
+                    }
+                },
+            });
+        });
+    </script>
+    <style>
+        input.error,
+        select.error,
+        textarea.error {
+            border: 2px solid red;
+            background-color: #ffe6e6;
+        }
+
+        label.error {
+            color: red;
+            font-size: 1.2em;
+            margin-top: 5px;
+            display: block;
+        }
+    </style>
+    <title>Tanácsadás</title>
+</head>
+<body>
+
+    <div class="container">
+        <header class="focim tanacs">
+            <h1>Tanácsadás</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="tej.html">Tej csokoládé</a></li>
+                <li><a href="et.html">Ét csokoládé</a></li>
+                <li><a href="feher.html">Fehér csokoládé</a></li>
+                <li><a href="kulonlegesseg.html">Különlegességek</a></li>
+                <li><a href="#" class="current">Tanácsadás</a></li>
+            </ul>
+        </nav>
+
+        <form action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php" method="post" id="kerdoiv"
+            novalidate="novalidate">
+            <h2>Ahhoz, hogy segíteni tudjunk szükségünk van egypár adatra!</h2>
+            <label for="nev">Név:</label>
+            <input type="text" name="nev" minlength="3" placeholder="pl.: Gipsz Jakab" id="nev">
+            <label for="gmail">E-mail cím:</label>
+            <input type="email" name="gmail" id="gmail" placeholder="pl.: gipszjakab@gmail.com">
+
+            <label for="telszam">Telefonszám:</label>
+            <input type="tel" name="telszam" id="telszam" placeholder="pl.: 06 30 123 45678">
+
+            <label for="neme">Neme:</label>
+            <select name="neme" id="neme">
+                <option value="" selected="">Válassz!</option>
+                <option value="ferfi">Férfi</option>
+                <option value="no">Nő</option>
+            </select>
+            <label for="szin">Milyen színű csokikat preferálsz?</label>
+            <input type="color" id="szin" name="szin">
+
+            <label for="tipus">Milyen típús csoki a kedvenced?</label>
+            <input type="text" list="fajtak" name="tipus" id="tipus" placeholder="Válaszd ki a kedvenc csoki típusod"
+                size="30">
+            <datalist id="fajtak">
+                <option value="Táblás">Táblás</option>
+                <option value="Bonbon">Bonbon</option>
+                <option value="Kézműves">Kézműves</option>
+                <option value="Rúd">Rúd</option>
+            </datalist>
+            <label for="interval">Mennyire szerted a csokit egy tizes skálán?</label>
+            <input type="range" name="interval" value="2" max="10" step="1" id="interval">
+            <label for="utoljara">Mikorra szeretnéd ha megjönne a rendelés</label>
+            <input type="date" id="utoljara" name="utoljara">
+            <label for="megfigyeles">Ha esetleg bármi észrevételed van az oldalla kapcsolatban azt itt tudod
+                jelezni</label>
+            <textarea name="megfigyeles" id="megfigyeles"
+                placeholder="Ide írd a gondolataid: pl. Nem tetszett az oldal:/" cols="50" rows="7"></textarea>
+
+            <input type="submit" value="Beküld">
+            <input type="reset" value="Alaphelyzet">
+        </form>
+
+        <div class="kaloria_szamlalo">
+            <header>
+                <h2>Kalória számláló</h2>
+            </header>
+            <label for="valasztek">Mi a kedvenc csokoládé márkád?</label>
+            <select id="valasztek" name="m">
+                <option value="Milka">Milka</option>
+                <option value="Boci">Boci</option>
+                <option value="Tibi">Tibi</option>
+                <option value="Lindt">Lindt</option>
+                <option value="Stühmer">Stühmer</option>
+                <option value="Merci">Merci</option>
+                <option value="Ritter Sport">Ritter Sport</option>
+            </select>
+
+            <p>Melyik a kedvenc hagyományos csokoládé fajtád?</p>
+            <div class="radio-csoport">
+                <div>
+                    <input type="radio" name="kedvenc" value="tej" id="tej">
+                    <label for="tej">Tej csokoládé</label>
+                </div>
+                <div>
+                    <input type="radio" name="kedvenc" value="feher" id="f">
+                    <label for="f">Fehér csokoládé</label>
+                </div>
+                <div>
+                    <input type="radio" name="kedvenc" value="et" id="et">
+                    <label for="et">Ét csokoládé</label>
+                </div>
+            </div>
+
+            <label for="nap">Egy nap átlagosan hány tábla csokit eszel meg?</label>
+            <input type="number" min="0" step="1"  name="nap" id="nap">
+
+            <button id="beadás">Számol</button>
+            <input type="text" id="szoveges">
+            <input type="text" id="szamos">
+        </div>
+    </div>
+    <footer>
+        <p>&copy;2024 Dobó Heléna Lilla</p>
+        <p>A csokoládé serkenti a gondolkodást ezért egyél te is sok csokit, de csak tanulmányi célokra</p>
+    </footer>
+    <script src="csoki_kaloria.js"></script>
+</body>
+
+
+</html>

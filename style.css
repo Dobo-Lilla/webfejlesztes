@@ -1,38 +1,73 @@
-/*mobilra vonatkozó beállítások*/
-*{
+* {
     box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "sajat";
+    src: url("NimbusRomNo9L-Med.otf");
+}
+
+html {
     padding: 0;
     margin: 0;
-    color: white
-}
-html{
-    scrollbar-width: 1px;
     scroll-behavior: smooth;
+    scrollbar-color: #888 #f4f4f4;
+    scrollbar-width: thin;
 }
-body
-{
+
+body {
+    color: white;
     background-color: #621708;
+    padding: 0;
+    margin: 0;
+    font-family: "sajat";
 }
-.container>* {margin: 1%;
-    height: fit-content;
+
+::-webkit-scrollbar {
+    width: 6px;
 }
-header{
+
+::-webkit-scrollbar-track {
+    background: lightgray;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.container {
     display: flex;
-    justify-content: center;
-    
-    
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
 }
-header#focim{
-    background-image: url(..//képek/joanna-kosinska-4dnG4q3kxdg-unsplash.jpg);
+
+.container>* {
+    margin: 1%;
+}
+
+/* HEADER */
+header {
+    flex: 1 1 100%;
+    justify-content: center;
+    align-content: center;
+}
+
+header.focim {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    
     height: 300px;
     margin: 0;
 }
 
-header#focim h1{
+header.focim h1 {
     font-weight: bold;
     font-variant: small-caps;
     text-align: center;
@@ -41,43 +76,76 @@ header#focim h1{
     font-size: 3em;
 }
 
-.alcimek{
-    font-style: italic;
-    text-align: center;
-    color: #220901;
-    font-size: 1.5em;
-}
+/* NAVBAR */
 nav {
-    padding: 6px;
+    display: flex;
+    flex-direction: column;
+
+    padding: 4px;
     flex: 1 1 100%;
-    
-}
-nav ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    
 }
 
-nav ul li a{
-    display: block;
-    margin: 5px;
+nav ul {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1 1 100%;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav ul li a {
+    display: flex;
+    justify-content: center;
+    color: #ffe6a7;
+    font-size: 1.3em;
+    text-align: center;
+    text-decoration: none;
+    background-color: #220901;
     border: solid #220901 1px;
     border-radius: 10px;
-    background-color: #F6AA1C;
-    padding: 10px;
-    color: #220901;
-    font-style: none;
-    text-decoration: none;
-    text-align: center;
-    font-size: 1.7em;
-    
-    
+    padding: 10px 14px;
+    margin: 5px;
 }
 
-.tortenelem
-{
-    background-color: #C52233;
+.current {
+    background-color: #f6aa1c;
+    color: #220901;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.current:hover {
+    background-color: #f6aa1c;
+    color: #220901;
+    border-radius: 0;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color: #ffe6a7;
+    color: #220901;
+    border-radius: 0%;
+    padding: 15px;
+}
+
+/* TARTALOM */
+article {
+    flex: 1 1 100%;
+}
+
+section {
+    flex: 1 1 100%;
+    margin: 5px 8px;
+    padding: 3px;
+}
+
+p {
+    text-align: justify;
+}
+
+.tortenelem {
+    background-color: #c52233;
     flex: 1 1 100%;
     margin: 10px;
     padding: 3px;
@@ -85,80 +153,737 @@ nav ul li a{
     border-radius: 10px 2px;
 }
 
-section{
+.osszetetel {
+    background-color: #74121d;
+    border: #580c1e dashed 2px;
     flex: 1 1 100%;
-    margin: 5px 8px;
+    margin: 10px;
     padding: 3px;
+    justify-content: center;
+    border-radius: 10px 2px;
 }
-aside.svajc{
+
+.alcimek {
+    font-style: italic;
+    text-align: center;
+    color: #432818;
+    font-size: 1.5em;
+}
+
+h2 {
+    margin: 0;
+}
+
+/* SZÉLSŐ ELEMEK */
+aside {
+    align-items: stretch;
+    flex: 1 1 100%;
+    margin: 5px;
+}
+
+.svajc {
+    background-image: url(képek/svajc.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: #ffe6a7 2px solid;
     display: flex;
     flex-direction: column;
     margin: 5px;
+    height: auto;
 }
-.svajc section
-{
-    
-    justify-content: space-around;
-}
-.svajc{
-    height: 300px;
-    background-image: url(..//képek/aside_hatter.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
-    border: #FFE6A7 1px solid;
-    
-}
-.svajc section{
+
+.svajc section {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: 10px;
 }
 
-aside.svajc header, .svajc li {
-    color: #FFE6A7;
+.svajc header,
+.svajc li {
+    color: #ffe6a7;
     font-size: 1.5em;
 }
 
-p{
-    text-align: justify;
+.eu img {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    max-width: 100%;
+    height: auto;
+    border: #ffe6a7 2px solid;
 }
 
-aside{
+.kakaobab img {
     display: flex;
-    margin: 10px;
+    justify-content: center;
+    border: #580c1e solid 2px;
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
 }
-.erdekes
-{
+
+.kakaobab img:hover {
+    transform: scale(1.01);
+    transition: 0.3s ease-out;
+    box-shadow: 1px 1px 3px 2px #c52233;
+}
+
+.erdekes {
     display: block;
-    background-color: #FFE6A7;
+    background-color: #ffe6a7;
     border-radius: 5px;
     padding: 10px;
+    order: 1;
 }
 
-.erdekes p{
+.erdekes p {
     color: #220901;
 }
 
-footer{
+/* Kérdőív */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #432818;
+
+    border: #220901 5px solid;
+    border-radius: 8px;
+}
+
+#kerdoiv,
+.kaloria_szamlalo {
+    display: flex;
+    width: 80%;
+    padding: 20px;
+    box-shadow: 0 8px 17px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    margin: 12px;
+}
+
+input {
+    padding: 8px;
+    margin: 5px 5px 5px 0;
+}
+
+.radio-csoport {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    /* távolság két választás között */
+    color: #fffaf0;
+
+}
+
+.radio-csoport div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* a gomb és a szöveg távolsága */
+}
+
+input[type="radio"] {
+    accent-color: #432818;
+    /* a kiválasztott gomb szine */
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+label {
+    font-size: 16px;
+    cursor: pointer;
+    color: #fffaf0;
+}
+
+
+label:hover {
+    color: #d2691e;
+    /*Minden szövegre rálehet kattiontani*/
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+textarea {
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 3px solid black;
+    border-radius: 4px;
+    flex-basis: 80%;
+    max-width: 100%;
+}
+
+
+select option,
+select option:hover {
+    background-color: #d2691e;
+}
+
+input[type="color"] {
+    padding: 3px;
+}
+input[type="text"] {
+    flex-basis: 100%;
+    max-width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    border: 3px solid black;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder,
+input[type="tel"]::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+datalist {
+    padding: 10px;
+}
+
+select {
+    display: flex;
+    padding: 8px;
+    background-color: #d2691e;
+    border: none;
+    border-radius: 15px;
+    flex: 1 1 100%;
+}
+
+input[type="submit"],
+input[type="reset"],
+button {
+    background-color: #d2691e;
+    color: #fffaf0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+
+}
+
+button {
+    flex: 1 1 100%;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:hover {
+    background-color: #f4a460;
+}
+
+input[type="range"] {
+    appearance: none;
+    flex-basis: 80%;
+    padding: 0;
+    height: 8px;
+    background-color: #a0522d;
+    border-radius: 5px;
+    outline: none;
+}
+
+.kaloria_szamlalo {
+    display: flex;
+    align-items: flex-start;
+
+    background-color: #220901;
+    border: solid 3px #a0522d
+}
+
+.kaloria_szamlalo p {
+    margin: 5px;
+}
+
+/* LÁBJEGYZET */
+
+footer {
     display: flex;
     justify-content: space-between;
-    background-color:  #432818;
-    align-items: center;
-    padding: 30px 10px;
+    background-color: #220901;
+    align-items: flex-end;
+    padding: 10px 10px;
     margin: 0;
 }
 
-
-@media all and (min-width: 600px) 
-{
-    /* tabletre vonatkozó beállítások */
+/* Osztályok */
+/* Készítés */
+.keszites {
+    background-color: #6d6d6d;
 }
 
+.focim.keszites_hatter {
+    background-image: url(képek/index_hatter.jpg);
+}
 
-@media all and (min-width: 768px) 
-{
+.eu.kep img {
+    border-color: #f4a460;
+    margin: 0;
+}
+
+.tortenelem.fermentalas {
+    background-color: #a9a9a9;
+    color: #220901;
+}
+
+.osszetetel.t {
+    background-color: #b0b0bb;
+    color: #220901;
+    border: 2px solid #d2691e;
+}
+
+.erdekes.k {
+    background-color: #f4a460;
+}
+
+figure {
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+    max-width: 100%;
+}
+
+figcaption {
+    font-size: 1.3em;
+    color: white;
+    margin-top: 3px;
+    text-align: center;
+}
+
+/* FEHÉR */
+.feher {
+    background-color: #fff8e7;
+}
+
+.focim.feher_focim_hatter {
+    background-image: url(képek/feher_hatter.jpg);
+    color: #220901;
+}
+
+.tortenelem.feher_gyartas,
+.tortenelem.feher_altalanos,
+.tortenelem.kakaovaj {
+    background-color: #f5f5dc;
+    color: #432818;
+}
+
+.osszetetel.feher_osszet,
+.erdekes.feher_erd {
+    background-color: #f8f4f0;
+    color: #432818;
+}
+
+.feher_tipusok {
+    display: block;
+    flex: 1 1 100%;
+}
+
+.feher_tipusok ul {
+    margin: 2px;
+}
+
+.feher_tipusok header {
+    padding-left: 5px;
+}
+
+article.feher_tipusok_belso {
+    border-radius: 10px;
+    color: #432818;
+    border: #432818 2px dotted;
+    margin: 6px;
+    padding: 5px;
+    background-color: #faebd7;
+}
+
+.feher_tipusok h2 {
+    margin: 2px;
+}
+
+.kakaobab.kakaovajkep img:hover {
+    transform: scale(1.01);
+    transition: 0.3s ease-out;
+    box-shadow: 1px 1px 3px 2px #432818;
+}
+
+/* TEJ */
+.focim.tej_hatter {
+    background-image: url(képek/tej_hatter.jpg);
+}
+
+/* ÉT */
+.container.et {
+    background-color: #382c1e;
+}
+
+.focim.et_hatter {
+    background-image: url(képek/etcsoki_hatter.jpg);
+}
+
+.focim.et_hatter h1 {
+    text-shadow: 2px 2px 4px #220901;
+}
+
+.tortenelem.et_tartalom {
+    background-color: #5c4033;
+}
+
+.alcimek.et_cimek {
+    color: #fffaf0;
+}
+
+.tortenelem.et_tartalom section p {
+    color: #fffaf0;
+}
+
+.tortenelem.et_mas {
+    background-color: #4b2e2e;
+}
+
+.kakaobab.spanyol img,
+.eu.spanyol img {
+    border: #2f1b0c solid 3px;
+    border-radius: 20px 0px;
+}
+
+.kakaobab.kakaobab.spanyol img:hover {
+    box-shadow: 2px 4px 3px #74121d;
+}
+
+.et_tipusok {
+    display: block;
+    flex: 1 1 100%;
+}
+
+.et_tipusok ul {
+    margin: 2px;
+}
+
+.et_tipusok header {
+    padding-left: 5px;
+}
+
+article.et_szazalek {
+    border-radius: 10px;
+    border: #cb4f08bc 2px solid;
+    margin: 6px;
+    padding: 5px;
+    background-color: #3d2b1f;
+    color: wheat;
+}
+
+.et_tipusok h2 {
+    margin: 2px;
+}
+
+.erdekes.et_erd {
+    background-color: #2f1b0c;
+}
+
+.et_szazalek header h2 {
+    color: wheat;
+    font-size: 1.4em;
+    font-style: italic;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.et_szazalek .et_szazalek section ul li {
+    list-style-type: square;
+    line-height: 20px;
+    color: wheat;
+}
+
+aside.erdekes.et_erd p {
+    color: #fffaf0;
+}
+
+/* ÉRDEKESSÉG */
+
+article.csokolade {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+    border: solid 5px #8b4513;
+    background-color: #d2b48c;
+    color: #a0522d;
+    
+}
+.csokolade h2{
+    margin: 5px;
+}
+
+.kulonleges {
+    background-color: #a67b5b;
+}
+
+.focim.csoki {
+    background-image: url(képek/kulonlegesseg_hatter.jpg);
+}
+
+/* TANÁCSADÁS */
+.kaloria_szamlalo {
+    display: flex;
+    flex-direction: column;
+}
+
+.focim.tanacs {
+    background-color: #220901;
+}
+
+@media all and (min-width: 600px) {
+
+    /* tabletre vonatkozó beállítások */
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        flex: 1 1 100%;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1 1 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    nav li {
+        align-content: center;
+        flex: 1 1 33%;
+    }
+
+    nav ul li a,
+    .current {
+        align-items: center;
+    }
+
+    .current:hover {
+        padding: 10px;
+    }
+
+    header {
+        flex: 1 1 100%;
+    }
+
+    aside {
+        flex: 1 1 45%;
+    }
+
+    article {
+        flex: 1 1 100%;
+    }
+
+    .kakaobab .eu {
+        width: 45%;
+    }
+
+    .tortenelem {
+        flex-basis: 45%;
+    }
+
+    .osszetetel {
+        flex-basis: 100%;
+    }
+
+    #darab_Cs {
+        flex-basis: 100%;
+    }
+
+    .erdekes {
+        flex-basis: 100%;
+    }
+
+    /* OSZTÁLYOK */
+    /* FEHÉRCSOKI */
+    .feher_tipusok {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .feher_tipusok_belso {
+        flex-basis: 35%;
+        align-content: center;
+    }
+
+    .erdekes.feher_erd {
+        order: 0;
+        flex: 1 1 100%;
+    }
+
+    .tortenelem.feher_altalanos {
+        flex: 1 1 100%;
+    }
+
+    .tortenelem.feher_gyartas {
+        flex: 1 1 30%;
+    }
+
+    .osszetetel .feher_osszet {
+        flex: 1 1 100%;
+    }
+
+    .kakaobab.kakaovaj {
+        flex: 1 1 30%;
+        order: 1;
+    }
+
+    /* ÉT */
+    .et_tipusok {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1 1 100%;
+    }
+
+    .et_szazalek {
+        flex: 1 1 44%;
+    }
+
+    /* Elkészítés */
+    .tortenelem.fermentalas {
+        flex: 1 1 100%;
+    }
+
+    .erdekes {
+        order: 0;
+    }
+
+    .eu.kep {
+        order: 1;
+    }
+
+    /* ÉRDEKESSÉG */
+    article.csokolade {
+        flex-direction: row;
+        flex-wrap: wrap-reverse;
+        flex: 1 1 43%;
+        height: max-content;
+    }
+    #kerdoiv,
+.kaloria_szamlalo {
+    display: flex;
+    width: 80%;
+    padding: 20px;
+    box-shadow: 0 8px 17px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    margin: 12px;
+}
+}
+
+@media all and (min-width: 768px) {
+
     /* számítógépre vonatkozó beállítások */
+    .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 
+    .container>nav {
+        margin: 0;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        flex: 1 1 100%;
+        justify-content: space-around;
+        background-color: #220901;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul {
+        margin: 0;
+        justify-content: space-around;
+    }
+
+    nav ul li {
+        flex: 1 1 15%;
+    }
+
+    nav ul li a {
+        background-color: inherit;
+        border: none;
+        padding: 5px;
+    }
+
+    .kakaobab,
+    .svajc,
+    .eu,
+    #darab_Cs {
+        flex-basis: 15%;
+    }
+
+    .tortenelem,
+    .osszetetel {
+        flex-basis: 45%;
+    }
+
+    .erdekes {
+        flex-basis: 100%;
+        order: 1;
+    }
+
+    /* OSZTÁLYOK */
+    /* FEHÉRCSOKI */
+    .feher_tipusok_belso {
+        flex-basis: 20%;
+        align-content: center;
+    }
+
+    /* Készítés */
+    .container .keszites {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap-reverse;
+    }
+
+    .erdekes.k {
+        order: 0;
+    }
+
+    .tortenelem.fermentalas {
+        flex: 1 1 50%;
+    }
+
+    .tortenelem.fermentalas.f {
+        flex: 1 1 45%;
+    }
+
+    .tortenelem.fermentalas.cs {
+        flex: 1 1 100%;
+    }
+
+    .eu.kep {
+        flex: 1 1 50%;
+        order: 0;
+    }
+
+    .tortenelem.fermentalas #f {
+        flex: 1 1 50%;
+    }
+
+    article.csokolade {
+        flex-direction: column;
+        flex: 1 1 25%;
+        height: fit-content;
+    }
+
+    
 }

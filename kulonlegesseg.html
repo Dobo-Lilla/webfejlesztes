@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dobó Heléna Lilla">
+    <meta name="copyright" content="csak oktatási célokra">
+    <meta name="description" content="A csokoládé árusítása népszerűsítése">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon/bonbon.png">
+    <link rel="stylesheet" tpye="text/css" href="slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" tpye="text/css" href="slick-1.8.1/slick/slick-theme.css">
+    <script src="jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="slick-1.8.1/slick/slick.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $(".center").slick({
+                dots: false,
+                infinite: true,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                autoplay: true,
+                arrows:true,
+                responsive: [
+                    {
+                        
+                        breakpoint: 768,
+                        settings: {
+                            autoplay:false,
+                            arrows: true,
+                            centerPadding: '60px',
+                            slidesToShow: 4,
+                            dots:true,
+                            slidesToScroll: 1,
+                       
+                            
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            arrows: false,
+                            centerPadding: '10px',
+                            slidesToShow: 1,
+                        }
+                    }
+                ]
+            });
+
+
+        });
+    </script>
+    <style type="text/css">
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .slider {
+            width:100%;
+            margin:60px 0;
+            padding:5px;
+            max-width: 90%;
+        }
+
+        .slick-slide {
+            margin: 0px 10px;
+            max-width: 100%;
+        }
+
+        .slick-slide img {
+            width: 100%;
+        }
+
+        .slick-prev:before,
+        .slick-next:before {
+            color: #bababa;
+        }
+
+        .slick-slide {
+            transition: all ease-in-out .2s;
+            opacity: .3;
+        }
+
+        .slick-active {
+            opacity: .6;
+        }
+
+        .slick-current {
+            opacity: 1;
+        }
+
+    </style>
+    <title>Különlegességek</title>
+</head>
+<body>
+    <div class="container kulonleges">
+        <header class="focim csoki">
+            <h1>Csokoládé Különlegességek</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Elkészítés</a></li>
+                <li><a href="tej.html">Tej csokoládé</a></li>
+                <li><a href="et.html">Ét csokoládé</a></li>
+                <li><a href="feher.html">Fehér csokoládé</a></li>
+                <li><a href="#" class="current">Különlegességek</a></li>
+                <li><a href="etkezes.html">Tanácsadás</a></li>
+            </ul>
+        </nav>
+
+        <section class="center slider">
+            <div><img src="képek/dubai_csoki.jpg" alt="pszitáci kérémmel töltött közel-keleti csoki"
+                    title="Dubai csoki"></div>
+            <div><img src="képek/ruby.jpg" alt="rubint szinű csoki" title="Rubint csoki"></div>
+            <div><img src="képek/matcha.jpg" alt="matcha japán csoki" title="Matcha"></div>
+            <div><img src="képek/edes_sos.jpg" alt="Reese's Cup" title="Reese's Cup"></div>
+            <div><img src="képek/izesitett.jpg" alt="Epre töltelékű csoki kockák" title="Ízesített csoki"></div>
+            <div><img src="képek/puffs.jpg" alt="Csoki gömbök" title="Csoki gömbök"></div>
+            <div><img src="képek/belga.jpg" alt="belga bonbon" title="Praliné"></div>
+        </section>
+
+        <article class="csokolade">
+            <header>
+                <h2>Dubai Csokoládé</h2>
+            </header>
+            <section>
+                <h3>Berobbant a köztudatba</h3>
+                <p>A dubai csoki a nevéből adódóan egy csokoládé különlegesség. A csoki belsejében kadayif tészta van,
+                    ami egy különleges, édes cérnametélt-szerű tészta. Eredetileg Törökországból származik, de már
+                    számos közel-keleti országban elterjedt különböző változatokban. A lényeg, hogy a vékony tészta
+                    általában desszertek alapanyagaként szolgál. A dubai csokiban kadayif mellett pisztáciakrém, és
+                    tahini (szezámmagból készült sűrű krém) van.
+                </p>
+                <h3>Elkészítése</h3>
+                <p>A tésztát éles késsel vágd apróra. A vajat egy serpenyőben olvaszd fel, add hozzá a tésztát, és
+                    pirítsd meg. A kétféle csokit aprítsd egy-egy külön tálba, locsold meg őket olajjal, és olvaszd fel
+                    a mikróban.
+                </p>
+                <p>A felaprított pisztáciával vékony rétegben rakd ki egy csokikészítő forma alját. Oszd el rajta az
+                    olvasztott ét- vagy tejcsoki felét. A pirított tésztát keverd el a pisztáciavajjal, a tahinivel, és
+                    kend meg a csokit ezzel a krémmel. Fedd be az olvasztott csoki másik felével, végül csorgasd rá a
+                    fehér csokit. Tedd a fagyasztóba három órára, hogy megdermedjen.
+                </p>
+            </section>
+        </article>
+
+        <article class="csokolade">
+            <header>
+                <h2>Rubin Csokoládé</h2>
+            </header>
+            <section>
+                <h3>A kakaóbab új dimenziója</h3>
+                <p>A rubin csokoládé természetes vöröses árnyalatú kakaóbabból készül, és gyümölcsös, bogyós aromákat
+                    kínál. Egyedülálló ízvilága 2017 óta forradalmasította a csokoládépiacot.</p>
+                <h3>Elkészítés</h3>
+                    <p>Vegyünk elő egy fazekat és egy fém- vagy üvegtálat, ami ráillik a fazékra. Tegyünk annyi vizet a
+                        fazékba, hogy ha ráhelyezzük a tálat, a víz ne érje el az alját, mert a csokoládépasztilla
+                        felolvasztáshoz csak a vízgőzre lesz szükségünk. Forraljuk fel a vizet, majd vegyük takarékra a
+                        lángot. Ha már gőzölög a víz, tegyük rá a tálat, majd szórjuk bele a csokoládé pasztillát.
+                        Folyamatosan kevergetve olvasszuk fel a pasztillákat. Amikor teljesen homogén állagúvá vált a
+                        masszánk, vegyük le a tűzről.
+                        Ha szeretnénk a csokiforma alján néhány kockába helyezhetünk el chia magot és kókusz reszeléket.
+                        Végül a csokit öntsük a formába és szórjuk meg még a chia maggal és a kókusszal. Először hagyjuk
+                        a szabad levegőn kicsit hűlni, majd tegyük be a hűtőbe megdermedni.
+                    </p>
+            </section>
+        </article>
+
+        <article class="csokolade">
+            <header>
+                <h2>Belga Pralinék</h2>
+            </header>
+            <section>
+                <h3>A belga csokoládé művészete</h3>
+                <p>A belga pralinék finom kézműves csokoládék, amelyek puha töltelékekkel - például mogyoró, karamell
+                    vagy likőr - vannak megtöltve. Világszerte híresek luxus minőségükről.
+                </p>
+                <h3>Elkészítése</h3>
+                <p>A tejszínt feltesszük melegedni, és ameddig forráspont közeli állapotba nem kerül, összetördeljük a
+                    csokoládét 
+                </p>
+                <p> A meleg habtejszínt ráöntjük az összetördelt csokoládéra, és várunk néhány percet, hogy a meleg
+                    folyadék kellőképpen megolvassza a csokoládét. A krémet egy spatula segítségével átkeverjük.
+                    Lefedjük frissen tartó fóliával úgy, mikor is a fóliát közvetlenül a krémre simítjuk. Néhány órára
+                    betesszük a hűtőbe, hogy visszadermedjen a töltelékünk.
+                </p>
+                <p>A kihűlt krémet néhányszor átkeverjük, és az étcsokoládés krémmel betöltjük a tortánkat.                   
+                </p>
+            </section>
+        </article>
+
+        <article class="csokolade">
+            <header>
+                <h2>Vegán Csokoládé</h2>
+            </header>
+            <section>
+                <h3>Növényi alapú finomságok</h3>
+                <p>A vegán csokoládék teljes mértékben tejmentesek, és gyakran növényi alapú összetevőkkel, például
+                    mandulatejjel vagy kókusztejjel készülnek. Egészségtudatos és környezettudatos alternatívát
+                    nyújtanak.</p>
+                <h3>Elkészítés</h3>
+                <p>Olvaszd meg a kakaóvajat vízgőz fölött, ügyelve, hogy ne melegedjen túl.
+                    Adagold hozzá a kakaóport, és keverd simára.
+                    Édesítsd kókuszcukorral vagy agavésziruppal, majd add hozzá a vaníliakivonatot és a csipetnyi sót. 
+                </p>
+                <p>
+                    Öntsd a keveréket csokoládéformákba vagy egy sütőpapírral bélelt tepsibe.
+                    Hűtsd le a hűtőben legalább 1-2 órára, amíg teljesen megdermed.
+                    Tálald, vagy csomagold be, hogy ajándéknak is tökéletes legyen!
+                </p>
+            </section>
+        </article>
+
+        <article class="csokolade">
+            <header>
+                <h2>Matcha Csokoládé</h2>
+            </header>
+            <section>
+                <h3>A japán zöld tea és a csokoládé találkozása</h3>
+                <p>A matcha csokoládé egyedülálló zöld színét és ízét a japán matcha teaportól kapja. Elsősorban fehér
+                    csokoládéval kombinálják, hogy kiegyensúlyozott, földes ízt biztosítson.
+                </p>
+                <h3>Elkészítés</h3>
+                <p>Olvaszd meg a fehér csokoládét vízgőz fölött, folyamatos keverés mellett.
+                    Adjuk hozzá a kókuszolajat, majd keverjük simára.
+                    Szitáljuk bele a matcha port, és keverjük jól össze, hogy egységes zöld színt kapjunk.
+                    Öntsük a keveréket szilikon csokoládéformákba vagy egy tepsibe sütőpapírral bélelve.
+                    Hűtsük le legalább 1-2 órára, amíg megdermed.</p>
+            </section>
+        </article>
+
+        <article class="csokolade">
+            <header>
+                <h2>Édes-sós Csokoládé</h2>
+            </header>
+            <section>
+                <h3>Az ízek tökéletes egyensúlya</h3>
+                <p>Az édes csokoládé és a tengeri só kombinációja rendkívül különleges ízélményt nyújt. A sós karamell
+                    és a sötét csokoládé kontrasztja a legnépszerűbb változat.
+                </p>
+                <h3>Elkészítés</h3>
+                <p>Olvaszd meg az étcsokoládét vízgőz fölött, és keverd hozzá az olvasztott vajat.
+                    Öntsd a csokoládét sütőpapírral bélelt tepsibe vagy szilikon formába.
+                    Szórd meg a tetejét a tengeri só pehely felével.
+                    Hűtsd le a csokoládét a hűtőben 1-2 órára, amíg megkeményedik.
+                    Szolgáld fel, és tálalás előtt szórd rá a maradék só pelyheket.
+                </p>
+            </section>
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy;2024 Dobó Heléna Lilla</p>
+        <p>A csokoládé serkenti a gondolkodást ezért egyél te is sok csokit, de csak tanulmányi célokra</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript">
+    </script>
+    <script src="slick-1.8.1/slick/slick.js" type="text/javascript" charset="utf-8">
+    </script>
+</body>
+
+</html>

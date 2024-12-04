@@ -1,0 +1,9 @@
+Név: Dobó Heléna Lilla
+URL: https://dobo-lilla.github.io/webfejlesztes/
+Leírás: A csokoládé történetét előállítását és különböző fajtáit mutatja be. Ezt egy-egy érdekességgel és különlegességgel kiegészítve.
+Javascript kód: 
+Ét csokoládé (et.html) oldalon található 5 darab olvass el gomb, ezek egy listát jelenítenek meg és tüntetnek el kattintásra. 
+Fehér csokoládé (feher.html) oldalon 8 fehér csokoládé típus látható egy-egy divben, ha rávisszük az egeret megváltozik a háttér és a border, majd ha elvisszük az egeret visszaáll eredeti állapotába. 
+Tanácsadás (etkezes.html) oldalon található egy kalória-számláló, ahol JavaScripttel számolom ki a bekért adatok alapján a kalóriát. Ezt az adat bekérést minimális szinten validálom is JavaScripttel.
+Font forrás: https://www.fontsquirrel.com/fonts/nimbus-roman-no9-l?filter%5Bclassifications%5D%5B0%5D=serif&filter%5Blanguages%5D%5B0%5D=hungarian
+Nimbus Roman N09 típusú

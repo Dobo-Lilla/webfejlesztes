@@ -1,0 +1,25 @@
+/* Basic styles for the button */
+.olvas_el_gomb {
+    background-color: #cb4f08bc;
+    /* Blue background */
+    color: #FFFAF0;
+    /* White text */
+    border: none;
+    /* Remove default border */
+    border-radius: 8px;
+    /* Rounded corners */
+    padding: 10px 15px;
+    /* Padding for size */
+    font-size: 1.2em;
+    /* Text size */
+    cursor: pointer;
+    /* Show pointer cursor */
+    transition: background-color 0.3s ease;
+    /* Smooth color transition */
+}
+
+/* Hover effect for the button */
+.olvas_el_gomb:hover {
+    background-color: #ad4407bc;
+    /* Darker blue on hover */
+}
